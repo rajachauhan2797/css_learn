@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-element Selector Example</title>
+    <style>
+      /* Style the paragraphs */
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        position: relative;
+      }
+
+      /* Apply styles to the first line of every paragraph */
+      p::first-line {
+        font-weight: bold;
+        color: blue;
+      }
+
+      /* Apply styles to the first letter of every paragraph */
+      p::first-letter {
+        font-size: 24px;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <p>
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat.
+    </p>
+  </body>
+</html>

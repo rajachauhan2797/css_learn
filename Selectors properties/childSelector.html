@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Selector Example</title>
+    <style>
+      /* Style the direct child <li> elements of <ul> */
+      ul > li {
+        background-color: lightblue;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid blue;
+      }
+
+      /* Style the direct child <span> elements of elements with class "box" */
+      .box > span {
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Direct Child Selector Example</h2>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <div class="box">
+      <span>Inside Box 1</span>
+      <div>
+        <span>Inside Box 2</span>
+      </div>
+    </div>
+  </body>
+</html>

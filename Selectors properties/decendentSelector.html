@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descendant Selector Example</title>
+    <style>
+      /* Styles the <p> elements inside a <div> */
+      div p {
+        color: blue;
+        font-weight: bold;
+      }
+
+      /* Additional styles for illustration purposes */
+      div {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>This paragraph is inside a div and will be styled.</p>
+    </div>
+    <p>
+      This paragraph is not inside a div and will not be affected by the CSS
+      rule.
+    </p>
+  </body>
+</html>
