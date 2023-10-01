@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Property Examples</title>
+    <style>
+      .static {
+        position: static;
+        background-color: lightblue;
+        margin: 20px;
+      }
+
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        background-color: lightgreen;
+        margin: 20px;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: lightcoral;
+        margin: 20px;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: lightsalmon;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 10px;
+        background-color: lightgoldenrodyellow;
+        margin: 20px;
+      }
+
+      .container {
+        height: 300px;
+        overflow-y: scroll;
+      }
+
+      .content {
+        height: 600px;
+        background-color: lightgray;
+        margin: 20px;
+      }
+
+      .container {
+        height: 300px;
+        overflow-y: scroll;
+        position: relative;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 10px;
+        background-color: lightgoldenrodyellow;
+        margin: 20px;
+      }
+    </style>
+  </head>
+
+  <body style="height: 10000px">
+    <div class="static">Static Position</div>
+    <div class="relative">Relative Position</div>
+    <div class="container">
+      <div class="absolute">Absolute Position (relative to container)</div>
+    </div>
+    <div class="fixed">Fixed Position (relative to viewport)</div>
+    <div class="content">
+      Scroll down to see Sticky Position
+      <div class="sticky">Sticky Position (becomes fixed after scrolling)</div>
+    </div>
+    <div class="content">
+      Scroll down to see Sticky Position
+      <div class="sticky">Sticky Position (becomes fixed after scrolling)</div>
+    </div>
+    <div class="content">
+      Scroll down to see Sticky Position
+      <div class="sticky">Sticky Position (becomes fixed after scrolling)</div>
+    </div>
+    <div class="content">
+      Scroll down to see Sticky Position
+      <div class="sticky">Sticky Position (becomes fixed after scrolling)</div>
+    </div>
+
+    <div class="container">
+      Scroll down to see Sticky Position
+      <div class="sticky" id="stickyElement">
+        Sticky Element (Sticks inside the container)
+      </div>
+    </div>
+    <div class="content">Content</div>
+
+    <script>
+      const stickyElement = document.getElementById("stickyElement");
+      const container = document.querySelector(".container");
+      const stickyOffset = container.offsetTop + 10; // 10px top offset
+
+      window.addEventListener("scroll", () => {
+        console.log("pageoffset", window.pageYOffset);
+        console.log("stickyOffset", window.stickyOffset);
+        if (window.pageYOffset >= stickyOffset) {
+          stickyElement.style.position = "fixed";
+          stickyElement.style.top = "10px"; // Adjust this value based on your needs
+        } else {
+          stickyElement.style.position = "sticky";
+          stickyElement.style.top = "10px";
+        }
+      });
+    </script>
+  </body>
+</html>

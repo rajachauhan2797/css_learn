@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Property Examples</title>
+    <style>
+      /* Block Element */
+      .block {
+        display: block; /* Renders as a block-level element */
+        width: 200px;
+        height: 50px;
+        background-color: lightblue;
+        margin-bottom: 10px;
+      }
+
+      /* Inline Elements */
+      .inline {
+        display: inline; /* Renders as an inline element */
+        background-color: lightgreen;
+        margin-right: 10px;
+      }
+
+      /* Inline Block Elements */
+      .inline-block {
+        display: inline-block; /* Renders as an inline-level block container */
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        margin-right: 10px;
+      }
+
+      /* Hidden Element */
+      .hidden {
+        display: none; /* Element is not displayed on the page */
+      }
+
+      /* Flexbox Container */
+      .flex-container {
+        display: flex; /* Enables a flex context for its direct children */
+        justify-content: space-around; /* Aligns flex items with space around them */
+      }
+
+      /* Grid Layout Container */
+      .grid-container {
+        display: grid; /* Enables a grid context for its direct children */
+        grid-template-columns: repeat(
+          3,
+          100px
+        ); /* Defines grid columns with 100px width each */
+        gap: 10px; /* Adds a 10px gap between grid items */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Block Element -->
+    <div class="block">Block Element</div>
+
+    <!-- Inline Elements -->
+    <span class="inline">Inline Element 1</span>
+    <span class="inline">Inline Element 2</span>
+
+    <!-- Inline Block Elements -->
+    <div class="inline-block">Inline Block Element 1</div>
+    <div class="inline-block">Inline Block Element 2</div>
+
+    <!-- Hidden Element -->
+    <div class="hidden">Hidden Element</div>
+
+    <!-- Flexbox Example -->
+    <h2>Flexbox Example</h2>
+    <div class="flex-container">
+      <div>Flex Item 1</div>
+      <div>Flex Item 2</div>
+      <div>Flex Item 3</div>
+    </div>
+
+    <!-- Grid Layout Example -->
+    <h2>Grid Layout Example</h2>
+    <div class="grid-container">
+      <div>Grid Item 1</div>
+      <div>Grid Item 2</div>
+      <div>Grid Item 3</div>
+      <div>Grid Item 4</div>
+      <div>Grid Item 5</div>
+      <div>Grid Item 6</div>
+    </div>
+  </body>
+</html>

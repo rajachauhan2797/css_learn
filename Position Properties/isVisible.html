@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check if Element is in Viewport</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin-top: 500px; /* Add a margin to move the box below the viewport initially */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box" id="myBox">This is a box</div>
+
+    <script>
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      var box = document.getElementById("myBox");
+
+      window.addEventListener("scroll", function () {
+        if (isElementInViewport(box)) {
+          console.log("Box is in the viewport!");
+        } else {
+          console.log("Box is out of the viewport.");
+        }
+      });
+    </script>
+  </body>
+</html>

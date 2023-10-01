@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Percentage</title>
+    <style>
+      body {
+        height: 1500px; /* Adding extra height to demonstrate scrolling */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="scrollPercentage" style="position: fixed">0%</div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        var scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollHeight =
+          document.documentElement.scrollHeight || document.body.scrollHeight;
+        var clientHeight =
+          document.documentElement.clientHeight || window.innerHeight;
+        var scrolledPercentage =
+          (scrollTop / (scrollHeight - clientHeight)) * 100;
+        document.getElementById("scrollPercentage").textContent =
+          scrolledPercentage.toFixed(2) + "%";
+      });
+    </script>
+  </body>
+</html>
