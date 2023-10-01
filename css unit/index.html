@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units Examples</title>
+    <style>
+      /* Absolute Length Units */
+      .absolute {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      /* Relative Length Units */
+      .relative {
+        font-size: 1.5em;
+        margin-top: 1em;
+      }
+
+      /* Percentage */
+      .percentage {
+        width: 50%;
+        height: 50px;
+        background-color: lightgreen;
+      }
+
+      /* Viewport Percentage Units */
+      .viewport {
+        width: 50vw;
+        height: 50vh;
+        background-color: lightblue;
+      }
+
+      /* Font Relative Units */
+      .font-relative {
+        font-size: 2rem;
+      }
+
+      /* Time Units */
+      .time {
+        animation: move 2s linear infinite;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(200px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Absolute Length Units -->
+    <div class="absolute">Absolute Length Units</div>
+
+    <!-- Relative Length Units -->
+    <div class="relative">Relative Length Units</div>
+
+    <!-- Percentage -->
+    <div class="percentage">50% Width</div>
+
+    <!-- Viewport Percentage Units -->
+    <div class="viewport">50vw Width & 50vh Height</div>
+
+    <!-- Font Relative Units -->
+    <div class="font-relative">Font Relative Units</div>
+
+    <!-- Time Units -->
+    <div class="time">Moves horizontally</div>
+  </body>
+</html>

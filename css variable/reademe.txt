@@ -1,0 +1,36 @@
+CSS variables, also known as custom properties, allow you to store and reuse values in your stylesheets. They provide a way to define reusable values in a CSS file, making it easier to manage and update the design of a website. CSS variables start with two dashes (`--`) and are case-sensitive.
+
+Here's how you define a CSS variable:
+
+```css
+:root {
+    --primary-color: #3498db;
+    --font-size: 16px;
+}
+```
+
+In this example, `--primary-color` and `--font-size` are CSS variables. They are defined inside the `:root` pseudo-class, which makes them globally available to the entire document. `--primary-color` is set to the color `#3498db`, and `--font-size` is set to `16px`.
+
+You can then use these variables throughout your CSS rules:
+
+```css
+body {
+    font-size: var(--font-size);
+    color: var(--primary-color);
+}
+```
+
+In this example, the `var()` function is used to reference the CSS variables. This way, if you decide to change the primary color or font size, you only need to update the variable value in one place (inside `:root`), and the change will be reflected wherever the variable is used.
+
+CSS variables can also be scoped to specific elements or selectors, not just `:root`. For example:
+
+```css
+.container {
+    --background-color: #f5f5f5;
+    background-color: var(--background-color);
+}
+```
+
+In this case, `--background-color` is scoped to the `.container` class, and it can be used within that class to set the background color.
+
+CSS variables are incredibly useful for creating themes, managing responsive designs, and maintaining consistent styles across a large codebase. They improve readability, maintainability, and make it easier to update styles across multiple elements.

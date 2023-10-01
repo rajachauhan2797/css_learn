@@ -1,0 +1,31 @@
+:root {
+    --primary-background: #ffffff;
+    /* Light mode background color */
+    --primary-text: #333333;
+    /* Light mode text color */
+}
+
+/* Dark mode theme */
+body.dark-mode {
+    --primary-background: #333333;
+    /* Dark mode background color */
+    --primary-text: #ffffff;
+    /* Dark mode text color */
+}
+
+body {
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+}
+
+/* Other styles using CSS variables */
+.header {
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+}
+
+.button {
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+    border: 2px solid var(--primary-text);
+}
